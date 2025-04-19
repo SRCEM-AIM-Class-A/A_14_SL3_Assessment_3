@@ -1,0 +1,41 @@
+/* Flask Custom CSS */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.custom-navbar {
+    background: linear-gradient(90deg, #ff416c, #ff4b2b);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.custom-navbar .nav-link {
+    font-size: 1.1rem;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #fff;
+}
+
+.footer.custom-footer {
+    background: #ff416c;
+    color: #fff;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.container {
+    padding-top: 2rem;
+}

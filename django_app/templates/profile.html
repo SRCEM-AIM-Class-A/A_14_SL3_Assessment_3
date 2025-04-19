@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}User Profile{% endblock %}
+
+{% block content %}
+<style>
+  .profile-header {
+    background: linear-gradient(to right, #6f42c1, #0d6efd);
+    color: white;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: -75px;
+    background-color: #f8f9fa;
+  }
+
+  .card-about {
+    background-color: #f8f9ff;
+    border: none;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  }
+</style>
+
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+    <div class="profile-header">
+      <h1 class="mb-0">👤 Anshul Parate</h1>
+      <p class="lead">AI/ML Engineer | Tech Explorer | Web Dev Enthusiast</p>
+    </div>
+
+    <div class="card text-center mb-4 shadow-sm">
+      <div class="card-body">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="rounded-circle profile-picture mb-3">
+        <h4 class="card-title mt-3">Anshul Parate</h4>
+        <p class="card-text mb-1"><strong>Email:</strong> <a href="mailto:anshulnparate@gmail.com">anshulnparate@gmail.com</a></p>
+        <p class="card-text"><strong>Location:</strong> Nagpur, India 🇮🇳</p>
+      </div>
+    </div>
+
+    <div class="card card-about shadow-sm">
+      <div class="card-body">
+        <h5 class="card-title mb-3">✨ About Me</h5>
+        <p class="card-text">
+          Hi, I'm Anshul Parate – an AI/ML Engineer passionate about developing innovative solutions that
+          push the boundaries of technology. I specialize in creating modern web applications and exploring
+          cutting-edge tools in artificial intelligence and machine learning.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

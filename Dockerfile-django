@@ -1,0 +1,17 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+# Copy and install requirements
+COPY django_app/requirements.txt /app/
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Copy the rest of the Django app
+COPY . /app
+
+# Collect static files (optional but good practice)
+RUN python manage.py collectstatic --noinput || true
+
+EXPOSE 8000
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

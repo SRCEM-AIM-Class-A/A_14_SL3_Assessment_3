@@ -1,0 +1,22 @@
+services:
+  django:
+    build:
+      context: .
+      dockerfile: Dockerfile-django
+    container_name: django_app_container
+    volumes:
+      - ./django_app:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - flask
+
+  flask:
+    build:
+      context: .
+      dockerfile: Dockerfile-flask
+    container_name: flask_app_container
+    volumes:
+      - ./flask_app:/app
+    ports:
+      - "5000:5000"
